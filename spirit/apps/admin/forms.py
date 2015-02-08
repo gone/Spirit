@@ -15,18 +15,12 @@ from spirit.apps.user.models import UserProfile
 User = get_user_model()
 
 
-class UserForm(forms.ModelForm):
+# class UserEditForm(forms.ModelForm):
 
-    class Meta:
-        model = User
-        fields = ("username", "email", "is_active")
-
-
-class UserProfileForm(forms.ModelForm):
-
-    class Meta:
-        model = UserProfile
-        fields = ("location", "timezone", "is_administrator", "is_moderator")
+#     class Meta:
+#         model = User
+#         fields = ("username", "email", "location",
+#                   "timezone", "is_administrator", "is_moderator", "is_active")
 
 
 class CategoryForm(forms.ModelForm):
