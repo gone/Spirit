@@ -88,12 +88,6 @@ class UserForm(forms.ModelForm):
         fields = ("first_name", "last_name")
 
 
-class UserProfileForm(forms.ModelForm):
-
-    class Meta:
-        model = UserProfile
-        fields = ("location", "timezone")
-
     def __init__(self, *args, **kwargs):
         super(UserProfileForm, self).__init__(*args, **kwargs)
         now = timezone.localtime(timezone.now())
