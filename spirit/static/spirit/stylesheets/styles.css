@@ -435,31 +435,6 @@ html {
   background-color: #fefefe;
   cursor: default; }
 
-body {
-  *zoom: 1;
-  max-width: 68em;
-  margin-left: auto;
-  margin-right: auto; }
-  body:before, body:after {
-    content: " ";
-    display: table; }
-  body:after {
-    clear: both; }
-
-html {
-  position: relative;
-  min-height: 100%; }
-
-body {
-  margin-bottom: 100px; }
-
-.footer {
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  height: 100px;
-  width: 100%; }
-
 fieldset {
   border: 0;
   margin: 0;
@@ -654,7 +629,7 @@ input[type="submit"].button,
   display: block;
   line-height: 42px;
   white-space: nowrap;
-  color: #cccccc;
+  color: #ccc;
   padding-left: 15px; }
   .side-menu-link:focus, .side-menu-link:hover {
     color: #fefefe;
@@ -666,7 +641,7 @@ input[type="submit"].button,
   font-size: 35px;
   line-height: 75px;
   margin-left: 15px;
-  color: #cccccc; }
+  color: #ccc; }
   .side-menu-close:focus, .side-menu-close:hover {
     color: #fefefe; }
 
@@ -778,8 +753,8 @@ input[type="submit"].button,
     .row-title {
       float: left;
       display: block;
-      margin-right: 3.57866%;
-      width: 48.21067%;
+      margin-right: 7.42297%;
+      width: 100%;
       margin-bottom: 0; }
       .row-title:last-child {
         margin-right: 0; } }
@@ -805,8 +780,8 @@ input[type="submit"].button,
     .row-info {
       float: left;
       display: block;
-      margin-right: 3.57866%;
-      width: 48.21067%;
+      margin-right: 7.42297%;
+      width: 100%;
       text-align: right; }
       .row-info:last-child {
         margin-right: 0; } }
@@ -830,8 +805,8 @@ input[type="submit"].button,
     .categories {
       float: left;
       display: block;
-      margin-right: 3.57866%;
-      width: 48.21067%; }
+      margin-right: 7.42297%;
+      width: 100%; }
       .categories:last-child {
         margin-right: 0; } }
 
@@ -849,8 +824,8 @@ input[type="submit"].button,
     .new-topic {
       float: left;
       display: block;
-      margin-right: 3.57866%;
-      width: 48.21067%;
+      margin-right: 7.42297%;
+      width: 100%;
       text-align: right; }
       .new-topic:last-child {
         margin-right: 0; } }
@@ -973,8 +948,8 @@ input.move-comment-checkbox {
     .paginator {
       float: left;
       display: block;
-      margin-right: 3.57866%;
-      width: 48.21067%; }
+      margin-right: 7.42297%;
+      width: 100%; }
       .paginator:last-child {
         margin-right: 0; } }
 
@@ -989,8 +964,8 @@ input.move-comment-checkbox {
     .notify {
       float: left;
       display: block;
-      margin-right: 3.57866%;
-      width: 48.21067%;
+      margin-right: 7.42297%;
+      width: 100%;
       text-align: right; }
       .notify:last-child {
         margin-right: 0; } }
@@ -1131,8 +1106,8 @@ ul.reply-markdown {
     .private-participants {
       float: left;
       display: block;
-      margin-right: 3.57866%;
-      width: 48.21067%; }
+      margin-right: 7.42297%;
+      width: 100%; }
       .private-participants:last-child {
         margin-right: 0; } }
 
@@ -1148,8 +1123,8 @@ ul.reply-markdown {
     .private-leave {
       float: left;
       display: block;
-      margin-right: 3.57866%;
-      width: 48.21067%;
+      margin-right: 7.42297%;
+      width: 100%;
       text-align: right; }
       .private-leave:last-child {
         margin-right: 0; } }
@@ -1248,3 +1223,5 @@ div.container {
   
 }
 */
+
+/*# sourceMappingURL=styles.css.map */

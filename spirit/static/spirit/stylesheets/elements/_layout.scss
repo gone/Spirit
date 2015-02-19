@@ -8,10 +8,3 @@ html {
   background-color: $white;
   cursor: default;
 }
-
-body {
-  @include outer-container;
-  // if not visual-grid, add paddings
-}
-
-@include sticky-footer(100px);
