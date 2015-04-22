@@ -105,7 +105,7 @@ def topic_detail(request, pk, slug):
 
     comments = paginate(
         comments,
-        per_page=config.comments_per_page,
+        per_page=config.comments_per_page or 30,
         page_number=request.GET.get('page', 1)
     )
 
@@ -130,7 +130,7 @@ def topic_active_list(request):
 
     topics = yt_paginate(
         topics,
-        per_page=config.topics_per_page,
+        per_page=config.topics_per_page or 30,
         page_number=request.GET.get('page', 1)
     )
 
