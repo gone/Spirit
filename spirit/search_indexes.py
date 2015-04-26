@@ -17,6 +17,10 @@ class TopicIndex(indexes.SearchIndex, indexes.Indexable):
     is_category_removed = indexes.BooleanField(model_attr='category__is_removed')
     is_subcategory_removed = indexes.BooleanField(model_attr='category__parent__is_removed', default=False)
 
+
+    def get_updated_field(self):
+        return "last_active"
+
     def get_model(self):
         return Topic
 
