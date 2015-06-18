@@ -38,7 +38,7 @@ urlpatterns = [
     url(r'^reset/done/$', password_reset_complete, {'template_name': 'spirit/user/password_reset_complete.html', },
         name='password-reset-complete'),
 
-    url(r'^$', views.profile_update, name='profile-update'),
+    url(r'^$', views.profile_password_change, name='profile-update'),
     url(r'^password-change/$', views.profile_password_change, name='profile-password-change'),
     url(r'^email-change/$', views.profile_email_change, name='profile-email-change'),
 

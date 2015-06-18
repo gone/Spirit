@@ -10,35 +10,34 @@ from djconfig import config
 
 from spirit.utils.paginator import yt_paginate
 from spirit.utils.decorators import administrator_required
-from spirit.apps.admin.forms import UserForm, UserProfileForm
 
 
 User = get_user_model()
 
 
-@administrator_required
-def user_edit(request, user_id):
-    user = get_object_or_404(User, pk=user_id)
+# @administrator_required
+# def user_edit(request, user_id):
+#     user = get_object_or_404(User, pk=user_id)
 
-    if request.method == 'POST':
-        uform = UserForm(data=request.POST, instance=user)
-        form = UserProfileForm(data=request.POST, instance=user.st)
+#     if request.method == 'POST':
+#         uform = UserForm(data=request.POST, instance=user)
+#         form = UserProfileForm(data=request.POST, instance=user.st)
 
-        if all([uform.is_valid(), form.is_valid()]):
-            uform.save()
-            form.save()
-            messages.info(request, _("This profile has been updated!"))
-            return redirect(request.GET.get("next", request.get_full_path()))
-    else:
-        uform = UserForm(instance=user)
-        form = UserProfileForm(instance=user.st)
+#         if all([uform.is_valid(), form.is_valid()]):
+#             uform.save()
+#             form.save()
+#             messages.info(request, _("This profile has been updated!"))
+#             return redirect(request.GET.get("next", request.get_full_path()))
+#     else:
+#         uform = UserForm(instance=user)
+#         form = UserProfileForm(instance=user.st)
 
-    context = {
-        'form': form,
-        'uform': uform
-    }
+#     context = {
+#         'form': form,
+#         'uform': uform
+#     }
 
-    return render(request, 'spirit/user/admin/edit.html', context)
+#     return render(request, 'spirit/user/admin/edit.html', context)
 
 
 @administrator_required

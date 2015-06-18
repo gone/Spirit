@@ -18,7 +18,7 @@ from spirit.apps.topic.admin import views as topic_views
 from spirit.apps.user.admin import views as user_views
 from spirit.apps.category.models import Category
 from spirit.apps.comment.flag.models import CommentFlag, Flag
-from spirit.apps.admin.forms import UserForm, CategoryForm, BasicConfigForm, CommentFlagForm, UserProfileForm
+from spirit.apps.admin.forms import  CategoryForm, BasicConfigForm, CommentFlagForm
 
 
 User = get_user_model()
@@ -390,22 +390,22 @@ class AdminFormTest(TestCase):
         self.category = utils.create_category()
         self.topic = utils.create_topic(self.category)
 
-    def test_user_edit(self):
-        """
-        Edit user profile
-        """
-        form_data = {"username": "fooedit",
-                     "email": "foo@bar.com",
-                     "location": "Bs As",
-                     "timezone": "UTC",
-                     "is_administrator": True,
-                     "is_moderator": True,
-                     "is_active": True}
-        form = UserForm(data=form_data)
-        self.assertEqual(form.is_valid(), True)
+    # def test_user_edit(self):
+    #     """
+    #     Edit user profile
+    #     """
+    #     form_data = {"username": "fooedit",
+    #                  "email": "foo@bar.com",
+    #                  "location": "Bs As",
+    #                  "timezone": "UTC",
+    #                  "is_administrator": True,
+    #                  "is_moderator": True,
+    #                  "is_active": True}
+    #     form = UserForm(data=form_data)
+    #     self.assertEqual(form.is_valid(), True)
 
-        form = UserProfileForm(data=form_data)
-        self.assertEqual(form.is_valid(), True)
+    #     form = UserProfileForm(data=form_data)
+    #     self.assertEqual(form.is_valid(), True)
 
     def test_category(self):
         """

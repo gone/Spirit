@@ -71,10 +71,10 @@ class Migration(migrations.Migration):
             name='topicunread',
             table='spirit_unread_topicunread',
         ),
-        migrations.AlterModelTable(
-            name='user',
-            table='spirit_user_user',
-        ),
+        # migrations.AlterModelTable(
+        #     name='user',
+        #     table='spirit_user_user',
+        # ),
         migrations.AlterModelTable(
             name='userprofile',
             table='spirit_user_userprofile',

@@ -9,7 +9,7 @@ from . import views
 
 urlpatterns = [
     url(r'^$', views.user_list, name='admin-user'),
-    url(r'^edit/(?P<user_id>\d+)/$', views.user_edit, name='admin-user-edit'),
+    #url(r'^edit/(?P<user_id>\d+)/$', views.user_edit, name='admin-user-edit'),
     url(r'^list/$', views.user_list, name='admin-user-list'),
     url(r'^admins/$', views.user_admins, name='admin-user-admins'),
     url(r'^mods/$', views.user_mods, name='admin-user-mods'),

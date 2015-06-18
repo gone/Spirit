@@ -20,8 +20,8 @@ from .utils.tokens import UserActivationTokenGenerator, UserEmailChangeTokenGene
 from spirit.utils.paginator import yt_paginate
 from spirit.apps.topic.models import Topic
 from spirit.apps.comment.models import Comment
-from spirit.apps.user.forms import UserProfileForm, RegistrationForm, \
-    LoginForm, EmailChangeForm, ResendActivationForm, UserForm, EmailCheckForm
+from spirit.apps.user.forms import  RegistrationForm, \
+    LoginForm, EmailChangeForm, ResendActivationForm, EmailCheckForm
 
 
 User = get_user_model()
@@ -127,27 +127,27 @@ def resend_activation_email(request):
 
 # TODO: decouple profile from user but maintain the url schema coz I like it that way
 
-@login_required
-def profile_update(request):
-    if request.method == 'POST':
-        uform = UserForm(data=request.POST, instance=request.user)
-        form = UserProfileForm(data=request.POST, instance=request.user.st)
+# @login_required
+# def profile_update(request):
+#     if request.method == 'POST':
+#         uform = UserForm(data=request.POST, instance=request.user)
+#         form = UserProfileForm(data=request.POST, instance=request.user.st)
 
-        if all([uform.is_valid(), form.is_valid()]):  # TODO: test!
-            uform.save()
-            form.save()
-            messages.info(request, _("Your profile has been updated!"))
-            return redirect(reverse('spirit:profile-update'))
-    else:
-        uform = UserForm(instance=request.user)
-        form = UserProfileForm(instance=request.user.st)
+#         if all([uform.is_valid(), form.is_valid()]):  # TODO: test!
+#             uform.save()
+#             form.save()
+#             messages.info(request, _("Your profile has been updated!"))
+#             return redirect(reverse('spirit:profile-update'))
+#     else:
+#         uform = UserForm(instance=request.user)
+#         form = UserProfileForm(instance=request.user.st)
 
-    context = {
-        'form': form,
-        'uform': uform
-    }
+#     context = {
+#         'form': form,
+#         'uform': uform
+#     }
 
-    return render(request, 'spirit/user/profile_update.html', context)
+#     return render(request, 'spirit/user/profile_update.html', context)
 
 
 @login_required
