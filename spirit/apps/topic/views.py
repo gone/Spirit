@@ -89,7 +89,7 @@ def topic_update(request, pk):
 
     return render(request, 'spirit/topic/update.html', context)
 
-
+@login_required
 def topic_detail(request, pk, slug):
     topic = Topic.objects.get_public_or_404(pk, request.user)
 
